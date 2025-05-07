@@ -33,3 +33,20 @@ const books = [
 // Output: [ { title: "Book A", rating: 4.5 }, { title: "Book C", rating: 5.0 } ]
 
 // PROBLEM ----> 3
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  const result = [];
+  for (let i = 0; i < arrays.length; i++) {
+    const item = arrays[i];
+    for (let i = 0; i < item.length; i++) {
+      const item2 = item[i];
+      result.push(item2);
+    }
+  }
+  return result;
+}
+
+// concatenateArrays(["a", "b"], ["c"]);       // Output: ["a", "b", "c"]
+// concatenateArrays([1, 2], [3, 4], [5]);     // Output: [1, 2, 3, 4, 5]
+
+// PROBLEM ----> 4
