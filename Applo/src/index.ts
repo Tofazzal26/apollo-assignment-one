@@ -130,3 +130,15 @@ function getDayType(day: Day): string {
 }
 
 // PROBLEM ----> 8
+
+async function squareAsync(n: number): Promise<number> {
+  const res = new Promise<number>((resolve, reject) => {
+    if (n < 0) {
+      return reject("Negative number not allowed");
+    }
+    setTimeout(() => {
+      return resolve(n * n);
+    }, 1000);
+  });
+  return res;
+}
