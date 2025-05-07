@@ -10,9 +10,6 @@ function formatString(input: string, toUpper?: boolean): string {
     return input.toUpperCase();
   }
 }
-// formatString("Hello"); // Output: "HELLO"
-// formatString("Hello", true); // Output: "HELLO"
-// formatString("Hello", false); // Output: "hello"
 
 // PROBLEM ----> 2
 
@@ -29,9 +26,6 @@ const books = [
   { title: "Book C", rating: 5.0 },
 ];
 
-// filterByRating(books);
-// Output: [ { title: "Book A", rating: 4.5 }, { title: "Book C", rating: 5.0 } ]
-
 // PROBLEM ----> 3
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
@@ -45,9 +39,6 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
   }
   return result;
 }
-
-// concatenateArrays(["a", "b"], ["c"]);       // Output: ["a", "b", "c"]
-// concatenateArrays([1, 2], [3, 4], [5]);     // Output: [1, 2, 3, 4, 5]
 
 // PROBLEM ----> 4
 
@@ -74,10 +65,6 @@ class Car extends Vehicle {
   }
 }
 
-// const myCar = new Car("Toyota", 2020, "Corolla");
-// myCar.getInfo(); // Output: "Make: Toyota, Year: 2020"
-// myCar.getModel(); // Output: "Model: Corolla"
-
 // PROBLEM ----> 5
 
 function processValue(value: string | number): number {
@@ -92,9 +79,6 @@ function processValue(value: string | number): number {
     return count;
   }
 }
-
-// console.log(processValue("hello")); // Output: 5
-// processValue(10); // Output: 20
 
 // PROBLEM ----> 6
 
@@ -124,7 +108,25 @@ const products = [
   { name: "Bag", price: 50 },
 ];
 
-// getMostExpensiveProduct(products)
-// Output: { name: "Bag", price: 50 }
-
 // PROBLEM ----> 7
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+function getDayType(day: Day): string {
+  //   console.log(day, "1");
+  if (day === Day.Saturday || day === Day.Sunday) {
+    return "Weekend";
+  } else {
+    return "Weekday";
+  }
+}
+
+// PROBLEM ----> 8
