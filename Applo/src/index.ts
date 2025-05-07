@@ -97,3 +97,34 @@ function processValue(value: string | number): number {
 // processValue(10); // Output: 20
 
 // PROBLEM ----> 6
+
+interface Product {
+  name: string;
+  price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  if (!products || products.length === 0) {
+    return null;
+  }
+  let expensive = 0;
+  let obj = { name: "", price: 0 };
+  for (let i = 0; i < products.length; i++) {
+    const oldPrice = products[i];
+    if (oldPrice.price > expensive) {
+      obj = oldPrice;
+    }
+  }
+  return obj;
+}
+
+const products = [
+  { name: "Pen", price: 10 },
+  { name: "Notebook", price: 25 },
+  { name: "Bag", price: 50 },
+];
+
+// getMostExpensiveProduct(products)
+// Output: { name: "Bag", price: 50 }
+
+// PROBLEM ----> 7
