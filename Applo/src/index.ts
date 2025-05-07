@@ -79,3 +79,21 @@ class Car extends Vehicle {
 // myCar.getModel(); // Output: "Model: Corolla"
 
 // PROBLEM ----> 5
+
+function processValue(value: string | number): number {
+  if (typeof value === "number") {
+    return value * 2;
+  } else {
+    let count = 0;
+    const str = value.split("");
+    for (let i = 0; i < str.length; i++) {
+      count += 1;
+    }
+    return count;
+  }
+}
+
+// console.log(processValue("hello")); // Output: 5
+// processValue(10); // Output: 20
+
+// PROBLEM ----> 6
