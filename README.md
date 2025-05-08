@@ -1,4 +1,4 @@
-1 --> KeyOf
+## KeyOf
 
 In TypeScript, keyof is a type of all the key types of an object type. Which gives us the name of all the properties of an object type as a type.
 
@@ -14,7 +14,7 @@ type UserKeys = keyof User;
 
 Here keyof User means "name" or "age" Here all the keys of the User type should be given as UserKeys. This is how keyof works.
 
-2 --> Enum
+## Enum
 
 Enum is a thing in TypeScript with which we can group a set of values ​​with a name. It is basically useful for capturing some values, whose values ​​we specify and keep fixed.
 
@@ -30,7 +30,7 @@ NOTFOUND
 
 We declare it like this. We can also use it while fetching data. Using enum allows us to keep specific values ​​in a group in the code and reduces the risk of misuse of values.
 
-3 --> Enum
+## Union
 
 In TypeScript, Union and Intersection types are two powerful features that help us create different combinations of types. We use them together in our code. It makes our code clean and readable.
 
@@ -40,7 +40,7 @@ Intersection Types are used when you want to combine multiple types, so that tha
 
 Multiple types are combined to create a new type, which will have all the features that we use.
 
-4 --> improving
+## improving
 
 TypeScript uses a type system, which helps us catch errors while writing code. When we specify a type, TypeScript detects the error and does not allow us to input a value of the wrong type.
 
